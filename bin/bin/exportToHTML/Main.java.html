@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ff6d7e;}
+.s1 { color: #f2fffc;}
+.s2 { color: #798384;}
+.s3 { color: #6b7678; font-style: italic;}
+.s4 { color: #ffed72;}
+</style>
+</head>
+<body bgcolor="#273136">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">){</span>
+    <span class="s1">Scanner input </span><span class="s0">= new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+    <span class="s3">//we want to make some variables in main to capture the input we are going to use</span>
+    <span class="s3">// to build our pet object in the Pet class, but they should not be used outside the pipeline</span>
+     <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;What type of pet do you have(Cat or Dog Only)?&quot;</span><span class="s2">);</span>
+        <span class="s1">String animalType </span><span class="s0">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+     <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;What is your pet's name?&quot;</span><span class="s2">);</span>
+        <span class="s1">String animalName </span><span class="s0">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+     <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;How old is your pet in years?&quot;</span><span class="s2">);</span>
+        <span class="s0">int </span><span class="s1">animalAge </span><span class="s0">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+     <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;How many days will your pet be staying with us?&quot;</span><span class="s2">);</span>
+        <span class="s0">int </span><span class="s1">lengthStay </span><span class="s0">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+     <span class="s3">//normally we would be throwing exceptions here for input types, formats, etc.</span>
+
+    <span class="s3">//now we are going to create a dog object by throwing these variables through our pet constructor</span>
+    <span class="s1">Dog firstDog </span><span class="s0">= new </span><span class="s1">Dog</span><span class="s2">(</span><span class="s1">animalType</span><span class="s2">,</span><span class="s1">animalName</span><span class="s2">,</span><span class="s1">animalAge</span><span class="s2">,</span><span class="s1">lengthStay</span><span class="s2">);</span>
+    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">firstDog</span><span class="s2">.</span><span class="s1">petName </span><span class="s0">+ </span><span class="s4">&quot; will be staying with us &quot; </span><span class="s0">+ </span><span class="s1">firstDog</span><span class="s2">.</span><span class="s1">daysStay </span><span class="s0">+ </span><span class="s4">&quot; days!&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

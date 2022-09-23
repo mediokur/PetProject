@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 public abstract class Pet{
+   //all my variables and their getter and setter methods are below
     private String petType;
     private String petName;
     private int petAge;
@@ -140,7 +141,7 @@ public abstract class Pet{
     //incrementing method
 
 
-    //this method is the op template for the welcome screen, look in operations for customization
+    //this method is the op template for the welcome screen, look in operations for its implementation
     public void welcomeText(){
         System.out.println("We can only house dogs and cats. Is their pet a dog?--(Yes/No)");
             setAnimalType(homeInput.nextLine());
@@ -154,7 +155,7 @@ public abstract class Pet{
     }
     public void incrementDogId(){
         Pet.dogIdCounter++;
-    }
+    } // methods to increment both the dog and cat object list id's
     public void incrementCatId(){
         Pet.catIdCounter++;
     }

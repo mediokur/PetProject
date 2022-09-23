@@ -14,6 +14,9 @@ public class Cat extends Pet {
         this.setDaysStay(stay);
     }
 
+    //this method and its loops perform the iteration for building a cat object from the information taken from operations
+    //and the loop follows through to completion by restarting the loop in operations.welcometext() the welcome point
+    //for the user interface
     public void newCat() {
         Cat currentCat = new Cat(getAnimalType(), getAnimalName(), getAnimalAge(), getLengthStay()); //this builds our object and sets the data for the object
         if (getCatSpaces() > 0) {

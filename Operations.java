@@ -1,6 +1,9 @@
 public class Operations extends Pet{
 
 
+
+    //built this class in case I wanted to create other methods around the operations(logging, storing, retrieving, etc.)
+    //of the application and it welcomeText method is the opening point for the user interface as the moment
     public void welcomeText(){
 
         Dog operationDog = new Dog(getAnimalType(), getAnimalName(), getAnimalAge(), getLengthStay());
@@ -15,9 +18,9 @@ public class Operations extends Pet{
         System.out.println("How old is their pet in years?");
         setAnimalAge(homeInput.nextInt());
         homeInput.nextLine();
-            if (getAnimalType().equalsIgnoreCase("yes")){
-                setDog(true);
-                operationDog.newDog();
+            if (getAnimalType().equalsIgnoreCase("yes")){ //this is the break point at which depending on the type
+                setDog(true);                                       //of pet its build that respective object and goes through
+                operationDog.newDog();                              // their conditional loops by calling their methods
 
             }
             else{
